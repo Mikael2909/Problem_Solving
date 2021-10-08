@@ -7,14 +7,16 @@ public class BallControl : MonoBehaviour
     private Rigidbody2D rigidbody2D;
     public float xForce;
     public float yForce;
+   
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        
     }
     void PushBall()
     {
-        float arahRandom = Random.Range(0, 2);
+        float arahRandom = Random.Range(0, 5);
         if (arahRandom < 1.0f)
         {
             rigidbody2D.AddForce(new Vector2(-xForce, yForce));
@@ -23,10 +25,13 @@ public class BallControl : MonoBehaviour
         {
             rigidbody2D.AddForce(new Vector2(xForce, yForce));
         }
+        Debug.Log(arahRandom);
     }
     // Update is called once per frame
     void Update()
     {
         PushBall();
+        
     }
+    
 }
