@@ -25,7 +25,7 @@ public class BallBounce : MonoBehaviour
     {
         var speed = kecepatan.magnitude;
         var direction = Vector3.Reflect(kecepatan.normalized, collision.contacts[0].normal);
-        rb.velocity = direction * Mathf.Max(speed, 0f);
+        rb.velocity = direction * Mathf.Max(speed, 1f);
     }
 }
 

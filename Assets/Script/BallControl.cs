@@ -16,14 +16,14 @@ public class BallControl : MonoBehaviour
     }
     void PushBall()
     {
-        float arahRandom = Random.Range(0, 5);
+        float arahRandom = Random.Range(-10, 10);
         if (arahRandom < 1.0f)
         {
             rigidbody2D.AddForce(new Vector2(-xForce, yForce));
         }
         else
         {
-            rigidbody2D.AddForce(new Vector2(xForce, yForce));
+            rigidbody2D.AddForce(new Vector2(xForce, -yForce));
         }
         Debug.Log(arahRandom);
     }
