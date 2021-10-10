@@ -22,7 +22,7 @@ public class ObstacleSpawner : MonoBehaviour
             float randomY = Random.Range(yMin, yMax);
             Instantiate(kotak, new Vector2(randomX, randomY), Quaternion.identity);
         }
-
+       
     }
 
     // Update is called once per frame

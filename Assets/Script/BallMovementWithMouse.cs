@@ -7,6 +7,7 @@ public class BallMovementWithMouse : MonoBehaviour
     private Rigidbody2D playerRigidbody;
     public Camera mainCam;
     public float speed;
+    public ScoreControl score;
     // Update is called once per frame
     private void Start()
     {
@@ -23,6 +24,14 @@ public class BallMovementWithMouse : MonoBehaviour
             
         
     }
-   
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Spawn")
+        {
+            score.IncrementScore();
+            Destroy(collision.gameObject);          
+        }
+    }
+
 
 }
