@@ -415,6 +415,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 933869905}
+  - component: {fileID: 933869906}
   - component: {fileID: 933869904}
   m_Layer: 0
   m_Name: Game Manager
@@ -432,13 +433,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 933869903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e7bc96ad35b985489e69c5197db7e64, type: 3}
+  m_Script: {fileID: 11500000, guid: f111f55578a15dd48b3b50cd8078592c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   kotak: {fileID: 4664061376026116576, guid: d60d29ec9e587894fbf807c0a8906656, type: 3}
   xMin: -7
   xMax: 8
-  yMin: -3
+  yMin: -4
   yMax: 2
 --- !u!4 &933869905
 Transform:
@@ -454,6 +455,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &933869906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933869903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5cd6aa4ec2b754fa44e1370bdf0bfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1075044667
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,7 +817,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761342865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.23, y: -0.97, z: 0}
+  m_LocalPosition: {x: 0.74, y: -1.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -840,7 +853,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1761342865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e25fe72bf3d4b24b8f2686c0f459e31, type: 3}
+  m_Script: {fileID: 11500000, guid: f0fb50b7060953640a135c613a7fe769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainCam: {fileID: 519420031}
