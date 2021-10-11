@@ -18,6 +18,10 @@ public class ScoreControl : MonoBehaviour
     {
         score++;
     }
+    public void DecrementScore()
+    {
+        score--;
+    }
     public int Score
     {
         get { return score; }

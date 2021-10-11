@@ -24,12 +24,14 @@ public class BallMovementWithMouse : MonoBehaviour
             
         
     }
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Spawn")
         {
             score.IncrementScore();
-            Destroy(collision.gameObject);          
+            Destroy(collision.gameObject);
+           
         }
     }
 

@@ -12,8 +12,9 @@ public class ObstacleSpawner : MonoBehaviour
     {
 
         Spawn();
+        StartCoroutine(SpawnKotak());
     }
-    void Spawn()
+    void Spawn()    
     {
         int penghitungObjek = Random.Range(5, 10);
         for (int i = 0; i < penghitungObjek; i++)
@@ -24,7 +25,19 @@ public class ObstacleSpawner : MonoBehaviour
         }
        
     }
+    IEnumerator SpawnKotak()
+    {
+        if (transform.childCount < 10)
+        {
+            float randomX = Random.Range(xMin, xMax);
+            float randomY = Random.Range(yMin, yMax);
 
+            Instantiate(kotak, new Vector2(randomX, randomY), Quaternion.identity); 
+            
+        }
+        yield return new WaitForSeconds(3);
+        StartCoroutine(SpawnKotak()); 
+    }
     // Update is called once per frame
     void Update()
     {
