@@ -8,6 +8,7 @@ public class BallMovementWithMouse : MonoBehaviour
     public Camera mainCam;
     public float speed;
     public ScoreControl score;
+    private bool isActive = false;
     // Update is called once per frame
     private void Start()
     {
@@ -21,19 +22,27 @@ public class BallMovementWithMouse : MonoBehaviour
         {
             transform.Translate(angle.normalized *speed* Time.deltaTime);
         }
-            
+         if (Input.GetMouseButtonDown(0))
+        {
+          transform.localScale += new Vector3(-0.2f, -0.2f, -0.2f);
+            score.DecrementScore();
+        }  
+        
         
     }
     
+   
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Spawn")
         {
+            transform.localScale += new Vector3(0.2f, 0.2f, 0.2f);
             score.IncrementScore();
             Destroy(collision.gameObject);
            
         }
     }
+    
 
 
 }

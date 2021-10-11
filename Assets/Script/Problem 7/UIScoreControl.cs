@@ -16,5 +16,6 @@ public class UIScoreControl : MonoBehaviour
     void Update()
     {
         score.text = scoreControl.GetCurrentScore().ToString();
+       
     }
 }

@@ -20,7 +20,9 @@ public class ScoreControl : MonoBehaviour
     }
     public void DecrementScore()
     {
+
         score--;
+        
     }
     public int Score
     {

@@ -35,7 +35,7 @@ public class ObstacleSpawner : MonoBehaviour
             Instantiate(kotak, new Vector2(randomX, randomY), Quaternion.identity); 
             
         }
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         StartCoroutine(SpawnKotak()); 
     }
     // Update is called once per frame
